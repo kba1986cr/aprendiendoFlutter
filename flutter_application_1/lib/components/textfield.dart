@@ -13,7 +13,7 @@ class TextFieldExample extends StatelessWidget {
           height: 60,
           //
         ),
-        SizedBox(height: 32),
+        /*SizedBox(height: 32),
         TextField(),
         SizedBox(height: 32),
         TextField(),
@@ -27,6 +27,7 @@ class TextFieldExample extends StatelessWidget {
             ),
           ),
         ),
+        */
         Padding(
           padding: EdgeInsets.all(8.0),
           child: TextField(
@@ -51,9 +52,10 @@ class TextFieldExample extends StatelessWidget {
         Padding(
           padding: EdgeInsets.all(8.0),
           child: TextField(
+            maxLines: 3,
             decoration: InputDecoration(
               hintText: "Introduce tu Comentario",
-              prefixIcon: Icon(Icons.email),
+              prefixIcon: Icon(Icons.comment_sharp),
               border: OutlineInputBorder(),
             ),
           ),
