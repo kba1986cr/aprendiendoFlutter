@@ -8,24 +8,22 @@ class GenderSelector extends StatefulWidget {
 }
 
 class _GenderSelectorState extends State<GenderSelector> {
-  String? selecterGender;
+  String? selectedGender;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        //Hombre
         Column(
           children: [
             //
             //Image.asset("assets/images/male.png"),
-            Text("Hola", style: TextStyle(color: Colors.white)),
           ],
         ),
-        //Mujer
         Column(
           children: [
             //
+            //Image.asset("assets/images/female.png"),
           ],
         ),
       ],
