@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:imc_dos/core/app_colors.dart';
+import 'package:imc_dos/screens/imc_home_screec.dart';
 
 void main() {
   runApp(const MainApp());
@@ -18,12 +19,7 @@ class MainApp extends StatelessWidget {
           title: Text("IMC CALCULATOR"),
         ),
         backgroundColor: AppColors.background,
-        body: Center(
-          child: Text(
-            'Hello World!',
-            style: TextStyle(color: Colors.white, fontSize: 24),
-          ),
-        ),
+        body: ImcHomeScreen(),
       ),
     );
   }
