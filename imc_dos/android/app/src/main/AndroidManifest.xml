@@ -1,9 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-<application
-    android:label="imc_calculator"
-    android:name="io.flutter.app.FlutterApplication"
-    android:icon="@mipmap/ic_launcher">
-
+    <application
+        android:label="imc_dos"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
             android:exported="true"
