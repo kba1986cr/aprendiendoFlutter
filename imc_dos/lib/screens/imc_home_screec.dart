@@ -18,7 +18,12 @@ class _ImcHomeScreenState extends State<ImcHomeScreen> {
         //
         GenderSelector(),
         HeightSelector(),
-        NumberSelector(),
+        Row(
+          children: [
+            NumberSelector(title: "Peso".toUpperCase()),
+            NumberSelector(title: "Edad".toUpperCase()),
+          ],
+        ),
       ],
     );
   }
