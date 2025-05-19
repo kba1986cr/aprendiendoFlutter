@@ -15,25 +15,42 @@ class _HeightSelectorState extends State<HeightSelector> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        //
-        Text("Altura".toUpperCase(), style: TextStyles.bodyText),
-        Text("$height cm".toUpperCase(), style: TextStyles.bodyText),
-        Slider(
-          value: height,
-          onChanged: (newHeight) {
-            setState(() {
-              height = newHeight;
-            });
-          },
-          min: 150,
-          max: 220,
-          divisions: 140,
-          label: "$height",
-          activeColor: AppColors.primary,
+    return Padding(
+      padding: const EdgeInsets.only(left: 16, top: 8, right: 16, bottom: 16),
+      child: Container(
+        decoration: BoxDecoration(
+          color: AppColors.backgroundComponent,
+          borderRadius: BorderRadius.circular(10),
         ),
-      ],
+        child: Column(
+          children: [
+            //
+            Text("Altura".toUpperCase(), style: TextStyles.bodyText),
+            Text(
+              "${height.toStringAsFixed(1)} cm".toUpperCase(),
+              //style: TextStyles.bodyText,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                fontSize: 22,
+              ),
+            ),
+            Slider(
+              value: height,
+              onChanged: (newHeight) {
+                setState(() {
+                  height = newHeight;
+                });
+              },
+              min: 150,
+              max: 220,
+              divisions: 140,
+              label: "$height  cm",
+              activeColor: AppColors.primary,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:imc_dos/components/gender_selector.dart';
 import 'package:imc_dos/components/height_selector.dart';
+import 'package:imc_dos/components/number_selector.dart';
 
 class ImcHomeScreen extends StatefulWidget {
   const ImcHomeScreen({super.key});
@@ -17,6 +18,7 @@ class _ImcHomeScreenState extends State<ImcHomeScreen> {
         //
         GenderSelector(),
         HeightSelector(),
+        NumberSelector(),
       ],
     );
   }
