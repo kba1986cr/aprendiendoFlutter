@@ -17,60 +17,74 @@ class _GenderSelectorState extends State<GenderSelector> {
     return Row(
       children: [
         Expanded(
-          child: Padding(
-            padding: const EdgeInsets.only(
-              left: 16,
-              top: 16,
-              right: 16,
-              bottom: 8,
-            ),
-            child: Container(
-              decoration: BoxDecoration(
-                color:
-                    selectedGender == "Hombre"
-                        ? AppColors.backgroundComponetSelected
-                        : AppColors.backgroundComponent,
-                borderRadius: BorderRadius.circular(10),
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedGender = "Hombre";
+              });
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(
+                left: 16,
+                top: 16,
+                right: 8,
+                bottom: 16,
               ),
-              child: Padding(
-                padding: const EdgeInsets.all(20),
-                child: Column(
-                  children: [
-                    //
-                    Image.asset("assets/images/m.png", height: 100),
-                    SizedBox(height: 10),
-                    Text("Hombre".toUpperCase(), style: TextStyles.bodyText),
-                  ],
+              child: Container(
+                decoration: BoxDecoration(
+                  color:
+                      selectedGender == "Hombre"
+                          ? AppColors.backgroundComponetSelected
+                          : AppColors.backgroundComponent,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
+                    children: [
+                      //
+                      Image.asset("assets/images/m.png", height: 100),
+                      SizedBox(height: 10),
+                      Text("Hombre".toUpperCase(), style: TextStyles.bodyText),
+                    ],
+                  ),
                 ),
               ),
             ),
           ),
         ),
         Expanded(
-          child: Padding(
-            padding: const EdgeInsets.only(
-              left: 16,
-              top: 16,
-              right: 16,
-              bottom: 8,
-            ),
-            child: Container(
-              decoration: BoxDecoration(
-                color:
-                    selectedGender == "Mujer"
-                        ? AppColors.backgroundComponetSelected
-                        : AppColors.backgroundComponent,
-                borderRadius: BorderRadius.circular(10),
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedGender = "Mujer";
+              });
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(
+                left: 8,
+                top: 16,
+                right: 16,
+                bottom: 16,
               ),
-              child: Padding(
-                padding: const EdgeInsets.all(20),
-                child: Column(
-                  children: [
-                    //
-                    Image.asset("assets/images/f.png", height: 100),
-                    SizedBox(height: 10),
-                    Text("Mujer".toUpperCase(), style: TextStyles.bodyText),
-                  ],
+              child: Container(
+                decoration: BoxDecoration(
+                  color:
+                      selectedGender == "Mujer"
+                          ? AppColors.backgroundComponetSelected
+                          : AppColors.backgroundComponent,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
+                    children: [
+                      //
+                      Image.asset("assets/images/f.png", height: 100),
+                      SizedBox(height: 10),
+                      Text("Mujer".toUpperCase(), style: TextStyles.bodyText),
+                    ],
+                  ),
                 ),
               ),
             ),
