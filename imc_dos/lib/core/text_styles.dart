@@ -7,6 +7,12 @@ class TextStyles {
     fontSize: 20,
   );
 
+  static const TextStyle bodyTextResult = TextStyle(
+    fontSize: 38,
+    color: Colors.white,
+    fontWeight: FontWeight.bold,
+  );
+
   /*
   static const String fontFamily = 'Poppins';
   static const String fontFamilyBold = 'Poppins-Bold';

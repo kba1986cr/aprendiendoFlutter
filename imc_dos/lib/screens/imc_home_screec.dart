@@ -6,6 +6,7 @@ import 'package:imc_dos/components/height_selector.dart';
 import 'package:imc_dos/components/imc_result_screen.dart';
 import 'package:imc_dos/components/number_selector.dart';
 import 'package:imc_dos/core/app_colors.dart';
+import 'package:imc_dos/core/buttos_style.dart';
 import 'package:imc_dos/core/text_styles.dart';
 
 class ImcHomeScreen extends StatefulWidget {
@@ -24,7 +25,7 @@ class _ImcHomeScreenState extends State<ImcHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.accent,
+      backgroundColor: AppColors.background,
       body: Column(
         children: [
           //
@@ -89,14 +90,7 @@ class _ImcHomeScreenState extends State<ImcHomeScreen> {
                     ),
                   );
                 },
-                style: ButtonStyle(
-                  shape: WidgetStatePropertyAll(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                  ),
-                  backgroundColor: WidgetStatePropertyAll(AppColors.primary),
-                ),
+                style: ButtonStyles.primaryButton,
                 child: Text("Calcular IMC", style: TextStyles.bodyText),
               ),
             ),
