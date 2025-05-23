@@ -84,7 +84,7 @@ class _ImcHomeScreenState extends State<ImcHomeScreen> {
                       builder:
                           (context) => ImcResultScreen(
                             height: selectedHeight,
-                            age: selectedAge,
+                            weight: selectedWeight,
                             selectedGender: selectedGender,
                           ),
                     ),
